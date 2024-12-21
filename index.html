@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jeevaharan | Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3, p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Header Section */
+        header {
+            background: #1f2937;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .contact-info {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+        }
+        .contact-info a {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .contact-info img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Animation Styles */
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        #about {
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+        }
+        #about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* Experience Section */
+        #experience {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .experience-item {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .experience-item img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .experience-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .experience-item p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        /* Recognition Section */
+        #recognitions {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .recognition-item {
+            margin: 10px auto;
+            padding: 15px;
+            background: #f8f9fa;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-item {
+            background: #f4f4f9;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Education Section */
+        #education {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            padding: 15px;
+            max-width: 800px;
+            background: #f9f9f9;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .education-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .education-item h3 {
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #f4f4f9;
+            padding: 40px;
+            text-align: center;
+        }
+        .project {
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .project h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Blogging Section */
+        #blogging {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .blog-box {
+            display: flex;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f4f4f9;
+            max-width: 800px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blog-box img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .blog-box a {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .blog-box a:hover {
+            color: #0056b3;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f2937;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="animate">
+        <h1>Jeevaharan M J</h1>
+        <p> Data Engineer</p>
+        <p>Buffalo, New York</p>
+        <div class="contact-info">
+            <a href="mailto:jeevaharan4@gmail.com">
+                <img src="./gmail-icon-free-png.webp" alt="Email Icon">Gmail
+            </a>
+            <a href="https://www.linkedin.com/in/jeevaharan-m-j-11a5b51a4/" target="_blank">
+                <img src="./LinkedIn_logo_initials.png" alt="LinkedIn Icon">LinkedIn
+            </a>
+            <a href="https://github.com/Jeevaharan" target="_blank">
+                <img src="./github_logo.png" alt="GitHub Icon">GitHub
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="animate">
+        <img src="./picture.jpeg" alt="Your Profile Picture">
+        <h2>About Me</h2>
+        <p>A Data enthusiast with over 3.5 years of experience in the field of Data Engineering, Analytics and Generative AI. Skilled in designing, implementing, and maintaining data pipelines and data warehousing. Currently pursuing Master’s in Data Science at the University at Buffalo (SUNY), with a focus on Statistical Data Mining, Machine Learning, and Database Management Systems.</p>
+        <p>My academic journey complements my professional experience, enhancing my ability to bridge theoretical concepts with practical applications. Passionate about using insights from data to solve complex business problems.</p>
+    </section>
+
+    <section id="experience" class="animate">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <img src="./cts logo.jpeg" alt="Company Logo">
+            <div>
+                <h3>Associate - Data / Gen AI Engineer</h3>
+                <p>Cognizant | June 2023 - July 2024</p>
+                <p>• Led proof of concept (POC) initiatives applying large language models like OpenAI’s GPT-3.5, Cohere’s command model, etc., utilizing retrieval-augmented generation (RAG) architecture, to perform advanced NLP tasks.</p>
+                <p>• Implemented prompt engineering strategies to improve chatbot accuracy for banking applications, enabling the automation of customer service interactions.</p>
+                <p>• Developed ETL workflows using Data Build Tool (DBT) to streamline data extraction, transformation, and loading.</p>
+            </div>
+        </div>
+        <div class="experience-item">
+            <img src="./cts logo.jpeg" alt="Company Logo">
+            <div>
+                <h3>Programmer Analyst - Data Engineer / Analyst</h3>
+                <p>Cognizant | June 2022 - June 2023</p>
+                <p>• Used StreamSets (ETL) to build batch pipelines for ingesting data from various sources like Oracle, SQL Server, APIs, Excel files into Snowflake.</p>
+                <p>• Successfully deployed over 250 masking policies in Snowflake to perform security implementation on tables and views.</p>
+            </div>
+        </div>
+        <div class="experience-item">
+            <img src="./cts logo.jpeg" alt="Company Logo">
+            <div>
+                <h3>Programmer Analyst Trainee - Data Engineer</h3>
+                <p>Cognizant | June 2021 - June 2022</p>
+                <p>• Led the development of data lineage documentation using Microsoft Visio, ensuring transparency of data flows and improving alignment with business processes across departments.</p>
+                <p>• Designed and implemented JavaScript stored procedures in snowflake which will automate data loading by making necessary transformations from external stage (Amazon S3) to snowflake, reducing manual data handling by 30%.</p>
+                <p>• Developed and optimized near real-time data pipelines using StreamSets CDC, migrating critical data from SQL Server to Snowflake.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="animate">
+        <h2>Internship</h2>
+        <div class="experience-item">
+            <img src="./cts logo.jpeg" alt="Company Logo">
+            <div>
+                <h3>Intern - Big Data Engineer</h3>
+                <p>Cognizant | March 2021 - June 2021</p>
+                <p>• Developed a credit card management system leveraging SQL, Sqoop, Hive, Spark, and other big data technologies for a banking organization. Performed data analysis and visualization to deliver actionable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recognitions" class="animate">
+        <h2>Recognitions</h2>
+        <div class="recognition-item">
+            <p> <b>”Always Striving, Never Settling”</b> - Recognized for successfully designing and implementing fault-tolerant and
+                scalable data pipelines, supporting critical business reports and decisions; <b>September 2023</b></p>
+        </div>
+        <div class="recognition-item">
+            <p> <b>”Working as one”</b> - Recognized for outstanding team collaboration and successful migration from Cloudera Hadoop
+                to an AWS-based Snowflake solution, resulting in significant cost savings for the company; <b>August 2022</b></p>
+        </div>
+    </section>
+
+    <section id="skills" class="animate">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Statistics</div>          
+            <div class="skill-item">Streamsets (ETL)</div>
+            <div class="skill-item">Snowflake (Data warehousing)</div>
+            <div class="skill-item">Large Language Models</div>
+            <div class="skill-item">R</div>
+            <div class="skill-item">Probability</div>  
+            <div class="skill-item">Power BI</div>
+            <div class="skill-item">Amazon Web Services</div>
+        </div>
+    </section>
+
+    <section id="education" class="animate">
+        <h2>Education</h2>
+        <div class="education-item">
+            <img src="./ub logo.jpg" alt="Education Icon">
+            <div>
+                <h3>University at Buffalo</h3>
+                <p>Master of Professional Studies (MPS), Data Sciences and Applications</p>
+                <p>Aug 2024 - Present</p>
+                <br>
+                <p>Coursework: Programming for Data Scientists, Statistical Data Mining 1, Database Management Systems, Probability and Data Analysis.
+                </p>
+            </div>
+        </div>
+        <div class="education-item">
+            <img src="./rmk_logo.gif" alt="Education Icon">
+            <div>
+                <h3>R.M.K Engineering College</h3>
+                <p>Bachelor of Engineering (BE) - Electrical and Electronics Engineering</p>
+                <p>Aug 2017 - June 2021 | GPA - 8.89/ 10</p>
+                <br>
+                <p>Coursework: Problem Solving and Python Programming,
+                    Microprocessors and Microcontrollers,
+                    Introduction to C Programming,
+                    Object Oriented Programming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="animate">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1: University Job Assistant</h3>
+            <p>Developed a Job assisting chatbot using OpenAI (gpt-3.5-turbo), Weaviate, langchain and Streamlit. This chatbot aims to assist the students by matching their skills and experience to suitable job roles within the university. Utilized prompting techniques to improve the accuracy of the model's response to job-related queries.</p>
+            <a href="#">View on GitHub</a>     
+        </div>
+        <div class="project">
+            <h3>Project 2: Heart Attack Analysis and prediction</h3>
+            <p>An interactive dashboard leveraging Streamlit and Machine Learning algorithms to predict heart attack likelihood. Built on a scalable pipeline, the solution integrates the K-Nearest Neighbors (KNN) model for classification and employs extensive feature engineering on clinical data. The dashboard combines cutting-edge predictive analytics with dynamic visualizations, delivering actionable insights to empower healthcare decision-making.</p>
+            <a href="#">View on GitHub</a>
+        </div>
+    </section>
+
+    <section id="blogging" class="animate">
+        <h2>Medium Blogs</h2>
+        <div class="blog-box">
+            <img src="./blog_1_img.webp" alt="Blog Image">
+            <div>
+                <p>Building a QA chatbot with memory using Langchain, Faiss, Streamlit and OpenAI (Retrieval-Augmented Generation (RAG))</p>
+                <a href="https://medium.com/@jeevaharan/building-a-qa-chatbot-with-memory-using-langchain-faiss-streamlit-and-openai-retrieval-augmented-24384d5f2070" target="_blank"><br>Visit My Medium Blog</a>
+            </div>
+        </div>
+        <div class="blog-box">
+            <img src="./blog_2_img.webp" alt="Blog Image">
+            <div>
+                <p>RAG chatbot using Cohere with ConversationBufferMemory and prompt template</p>
+                <a href="https://medium.com/@jeevaharan/rag-chatbot-using-cohere-with-conversationbuffermemory-and-prompt-template-57750c6c5a20" target="_blank"><br>Visit My Medium Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="animate">
+        <div class="contact-info">
+            <a href="mailto:jeevaharan4@gmail.com">
+                <img src="./gmail-icon-free-png.webp" alt="Email Icon">Gmail
+            </a>
+            <a href="https://www.linkedin.com/in/jeevaharan-m-j-11a5b51a4/" target="_blank">
+                <img src="./LinkedIn_logo_initials.png" alt="LinkedIn Icon">LinkedIn
+            </a>
+            <a href="https://github.com/Jeevaharan" target="_blank">
+                <img src="./github_logo.png" alt="GitHub Icon">GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.animate');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
