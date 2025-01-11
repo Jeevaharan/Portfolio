@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Jeevaharan | Data Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: "Plus Jakarta Sans", serif;
             background-color: #f9f9f9;
             color: #333;
+            line-height: 25px;
         }
         
+        .title-demo{
+            margin-bottom: 12px;
+        }
         h1, h2, h3, p {
             margin: 0;
         }
@@ -85,36 +91,57 @@
 
         /* Experience Section */
         #experience {
-            background-color: #fff;
             padding: 40px;
+            max-width: 800px;
+            margin: auto;
             text-align: center;
         }
+        .experience-container {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #ccc;
+            text-align: left;
+        }
         .experience-item {
-            display: flex;
-            align-items: center;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #f4f4f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
         }
-        .experience-item img {
-            width: 60px;
-            height: 60px;
-            margin-right: 20px;
-            border-radius: 8px;
-        }
-        .experience-item h3 {
-            margin: 0;
+        .experience-title {
             font-size: 1.5em;
+            font-weight: bold;
         }
-        .experience-item p {
-            margin: 5px 0;
+        .experience-company {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #555;
+        }
+        .experience-date {
+            background: #ddd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .experience-description {
             font-size: 1em;
+            margin-top: 5px;
         }
+        .experience-description::before {
+            content: "• ";
+            color: #333;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            .experience-container {
+                padding-left: 10px;
+                border-left: 2px solid #ccc;
+            }
+        }
+
         .side-heading{
-            font-style: italic;
             font-weight: bolder;
         }
 
@@ -247,76 +274,69 @@
 </head>
 <body>
     <header class="animate">
-        <h1>Jeevaharan M J</h1>
+        <h2>Jeevaharan M J</h2>
+
         <p> Data Engineer</p>
         <p>Buffalo, New York</p>
         <div class="contact-info">
             <a href="mailto:jeevaharan4@gmail.com">
-                <img src="./gmail-icon-free-png.webp" alt="Email Icon">Gmail
+                <img src="./Images/gmail-icon-free-png.webp" alt="Email Icon">Gmail
             </a>
             <a href="https://www.linkedin.com/in/jeevaharan-m-j-11a5b51a4/" target="_blank">
-                <img src="./LinkedIn_logo_initials.png" alt="LinkedIn Icon">LinkedIn
+                <img src="./Images/LinkedIn_logo_initials.png" alt="LinkedIn Icon">LinkedIn
             </a>
             <a href="https://github.com/Jeevaharan" target="_blank">
-                <img src="./github_logo.png" alt="GitHub Icon">GitHub
+                <img src="./Images/github_logo.png" alt="GitHub Icon">GitHub
             </a>
         </div>
     </header>
 
     <section id="about" class="animate">
-        <img src="./picture.jpeg" alt="Your Profile Picture">
-        <h2>About Me</h2>
-        <p>A Data enthusiast with over 3.5 years of experience in the field of Data Engineering, Analytics and Generative AI. Skilled in designing, implementing, and maintaining data pipelines and data warehousing. Currently pursuing Master’s in Data Science at the University at Buffalo (SUNY), with a focus on Statistical Data Mining, Machine Learning, and Database Management Systems.</p>
-        <p>My academic journey complements my professional experience, enhancing my ability to bridge theoretical concepts with practical applications. Passionate about using insights from data to solve complex business problems.</p>
+        <img src="./Images/Pic.JPG" alt="Your Profile Picture">
+        <h2 class="title-demo">About Me</h2>
+        <p>A Data enthusiast with over 3.5 years of experience in the field of Data Engineering, Analytics and Generative AI. Skilled in designing, implementing, and maintaining data pipelines and cloud data warehousing solutions. Currently pursuing Master’s in Data Science at the University at Buffalo (SUNY), with a focus on Statistical Data Mining, Machine Learning, and Database Management Systems. Passionate about using insights from data to solve complex business problems.</p>
     </section>
 
-    <section id="experience" class="animate">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <img src="./cts logo.jpeg" alt="Company Logo">
-            <div>
-                <h3>Associate - Data / Gen AI Engineer</h3>
-                <p class="side-heading">Cognizant | June 2023 - July 2024</p>
-                <p>• Led proof of concept (POC) initiatives applying large language models like OpenAI’s GPT-3.5, Cohere’s command model, etc., utilizing retrieval-augmented generation (RAG) architecture, to perform advanced NLP tasks.</p>
-                <p>• Implemented prompt engineering strategies to improve chatbot accuracy for banking applications, enabling the automation of customer service interactions.</p>
-                <p>• Developed ETL workflows using Data Build Tool (DBT) to streamline data extraction, transformation, and loading.</p>
+    <section id="experience">
+        <h2 class="title-demo">Work Experience</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <h4 class="experience-title">Associate - Data / Gen AI Engineer</h4>
+                <p class="experience-company">Cognizant</p>
+                <span class="experience-date">June 2023 - July 2024</span>
+                <p class="experience-description">Led proof of concept (POC) initiatives applying large language models like OpenAI’s GPT-3.5, Cohere’s command model, etc., utilizing retrieval-augmented generation (RAG) architecture, to perform advanced NLP tasks.</p>
+                <p class="experience-description">Implemented prompt engineering strategies to improve chatbot accuracy for banking applications, enabling the automation of customer service interactions.</p>
+                <p class="experience-description">Developed ETL workflows using Data Build Tool (DBT) to streamline data extraction, transformation, and loading.</p>
             </div>
-        </div>
-        <div class="experience-item">
-            <img src="./cts logo.jpeg" alt="Company Logo">
-            <div>
-                <h3>Programmer Analyst - Data Engineer / Analyst</h3>
-                <p class="side-heading">Cognizant | June 2022 - June 2023</p>
-                <p>• Used StreamSets (ETL) to build batch pipelines for ingesting data from various sources like Oracle, SQL Server, APIs, Excel files into Snowflake.</p>
-                <p>• Successfully deployed over 250 masking policies in Snowflake to perform security implementation on tables and views.</p>
+            <div class="experience-item">
+                <h4 class="experience-title">Programmer Analyst - Data Engineer / Analyst</h4>
+                <p class="experience-company">Cognizant</p>
+                <span class="experience-date">June 2022 - June 2023</span>
+                <p class="experience-description">Used StreamSets (ETL) to build batch pipelines for ingesting data from various sources like Oracle, SQL Server, APIs, Excel files into Snowflake.</p>
+                <p class="experience-description">Successfully deployed over 250 masking policies in Snowflake to perform security implementation on tables and views.</p>
+                <p class="experience-description">Designed a dashboard using Power BI for monitoring 500+ jobs related to mining operations, and report the users
+                    in case of job failure or downtime.</p>
             </div>
-        </div>
-        <div class="experience-item">
-            <img src="./cts logo.jpeg" alt="Company Logo">
-            <div>
-                <h3>Programmer Analyst Trainee - Data Engineer</h3>
-                <p class="side-heading">Cognizant | June 2021 - June 2022</p>
-                <p>• Led the development of data lineage documentation using Microsoft Visio, ensuring transparency of data flows and improving alignment with business processes across departments.</p>
-                <p>• Designed and implemented JavaScript stored procedures in snowflake which will automate data loading by making necessary transformations from external stage (Amazon S3) to snowflake, reducing manual data handling by 30%.</p>
-                <p>• Developed and optimized near real-time data pipelines using StreamSets CDC, migrating critical data from SQL Server to Snowflake.</p>
+            <div class="experience-item">
+                <h4 class="experience-title">Programmer Analyst Trainee - Data Engineer</h4>
+                <p class="experience-company">Cognizant</p>
+                <span class="experience-date">June 2021 - June 2022</span>
+                <p class="experience-description">Led the development of data lineage documentation using Microsoft Visio, ensuring transparency of data flows and improving alignment with business processes across departments.</p>
+                <p class="experience-description">Designed and implemented JavaScript stored procedures in snowflake which will automate data loading by making necessary transformations from external stage (Amazon S3) to snowflake, reducing manual data handling by 30%.</p>
+                <p class="experience-description">Developed and optimized near real-time data pipelines using StreamSets CDC, migrating critical data from SQL Server to Snowflake.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="experience" class="animate">
-        <h2>Internship</h2>
-        <div class="experience-item">
-            <img src="./cts logo.jpeg" alt="Company Logo">
-            <div>
-                <h3>Intern - Big Data Engineer</h3>
-                <p class="side-heading">Cognizant | March 2021 - June 2021</p>
-                <p>• Developed a credit card management system leveraging SQL, Sqoop, Hive, Spark, and other big data technologies for a banking organization. Performed data analysis and visualization to deliver actionable insights.</p>
+            <div class="experience-item">
+                <h4 class="experience-title">Intern - Big Data Engineer</h4>
+                <p class="experience-company">Cognizant</p>
+                <span class="experience-date">March 2021 - June 2021</span>
+                <p class="experience-description">Developed a credit card management system leveraging SQL, Sqoop, Hive, Spark, and other big data technologies for a banking organization. Performed data analysis and visualization to deliver actionable insights.</p>
             </div>
         </div>
     </section>
 
     <section id="recognitions" class="animate">
-        <h2>Recognitions</h2>
+        <h2 class="title-demo">Recognitions</h2>
         <div class="recognition-item">
             <p> <b>”Always Striving, Never Settling”</b> - Recognized for successfully designing and implementing fault-tolerant and
                 scalable data pipelines, supporting critical business reports and decisions; <b>September 2023</b></p>
@@ -331,25 +351,27 @@
         <h2>Skills</h2>
         <div class="skills-list">
             <div class="skill-item">Python</div>
-            <div class="skill-item">Machine Learning</div>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">Statistics</div>          
+
+            <div class="skill-item">SQL</div>     
             <div class="skill-item">Streamsets (ETL)</div>
             <div class="skill-item">Snowflake (Data warehousing)</div>
-            <div class="skill-item">Large Language Models</div>
+            <div class="skill-item">GitLab</div>
             <div class="skill-item">R</div>
-            <div class="skill-item">Probability</div>  
             <div class="skill-item">Power BI</div>
-            <div class="skill-item">Amazon Web Services</div>
+            <div class="skill-item">Amazon Web Services (AWS)</div>
+            <div class="skill-item">Data Build tool (DBT)</div>
+            <div class="skill-item">Machine Learning</div>
+            <div class="skill-item">Large Language Models (LLM)</div>
+            <div class="skill-item">Prompt Engineering</div>
         </div>
     </section>
 
     <section id="education" class="animate">
         <h2>Education</h2>
         <div class="education-item">
-            <img src="./ub logo.jpg" alt="Education Icon">
+            <img src="./Images/ub logo.jpg" alt="Education Icon">
             <div>
-                <h3>University at Buffalo</h3>
+                <h3>University at Buffalo (SUNY)</h3>
                 <p class="side-heading">Master of Professional Studies (MPS), Data Sciences and Applications</p>
                 <p class="side-heading">Aug 2024 - Present | CGPA - 4.0/ 4.0</p>
                 <br>
@@ -358,7 +380,7 @@
             </div>
         </div>
         <div class="education-item">
-            <img src="./rmk_logo.gif" alt="Education Icon">
+            <img src="./Images/rmk_logo.gif" alt="Education Icon">
             <div>
                 <h3>R.M.K Engineering College</h3>
                 <p class="side-heading">Bachelor of Engineering (BE) - Electrical and Electronics Engineering</p>
@@ -375,12 +397,12 @@
     <section id="projects" class="animate">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1: University Job Assistant</h3>
+            <h3>University Job Assistant</h3>
             <p>Developed a Job assisting chatbot using OpenAI (gpt-3.5-turbo), Weaviate, langchain and Streamlit. This chatbot aims to assist the students by matching their skills and experience to suitable job roles within the university. Utilized prompting techniques to improve the accuracy of the model's response to job-related queries.</p>
             <a href="https://github.com/Jeevaharan/Custom-QA-chatbot-using-OpenAI">View on GitHub</a>     
         </div>
         <div class="project">
-            <h3>Project 2: Heart Attack Analysis and prediction</h3>
+            <h3>Heart Attack Analysis and prediction</h3>
             <p>An interactive dashboard leveraging Streamlit and Machine Learning algorithm to predict heart attack likelihood. Built on a scalable pipeline, the solution integrates the K-Nearest Neighbors (KNN) model for classification and employs extensive feature engineering on clinical data. The dashboard combines predictive analytics with dynamic visualizations, delivering actionable insights to empower healthcare decision-making.</p>
             <a href="https://github.com/Jeevaharan/Heart_attack_analysis_prediction">View on GitHub</a>
         </div>
@@ -389,16 +411,16 @@
     <section id="blogging" class="animate">
         <h2>Medium Blogs</h2>
         <div class="blog-box">
-            <img src="./blog_1_img.webp" alt="Blog Image">
+            <img src="./Images/blog_1_img.webp" alt="Blog Image">
             <div>
                 <p>Building a QA chatbot with memory using Langchain, Faiss, Streamlit and OpenAI (Retrieval-Augmented Generation (RAG))</p>
                 <a href="https://medium.com/@jeevaharan/building-a-qa-chatbot-with-memory-using-langchain-faiss-streamlit-and-openai-retrieval-augmented-24384d5f2070" target="_blank"><br>Visit My Medium Blog</a>
             </div>
         </div>
         <div class="blog-box">
-            <img src="./blog_2_img.webp" alt="Blog Image">
+            <img src="./Images/blog_2_img.webp" alt="Blog Image">
             <div>
-                <p>RAG chatbot using Cohere with ConversationBufferMemory and prompt template</p>
+                <p>RAG chatbot using Cohere with Conversation Buffer Memory and prompt template</p>
                 <a href="https://medium.com/@jeevaharan/rag-chatbot-using-cohere-with-conversationbuffermemory-and-prompt-template-57750c6c5a20" target="_blank"><br>Visit My Medium Blog</a>
             </div>
         </div>
